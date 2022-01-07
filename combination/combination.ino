@@ -62,6 +62,259 @@ class Interrupt{
 
 int mouseclick(int num){
   /*TODO 位置を指定する!!!*/
+#if PROCESSING == 1
+  #if DEBUG >= 1
+      //Serial.println("keypress");
+      Serial.print("2: ");
+#endif
+  if(digitalRead(7) == LOW){
+  switch (num){
+    case 48:
+      Digitizer.move(350,600+150*2); //Low C
+#if DEBUG >= 1
+      Serial.println("LowC");
+#endif
+      break;
+    case 50:
+      Digitizer.move(350+200*1,600+150*2); //Low D
+#if DEBUG >= 1
+      Serial.println("LowD");
+#endif
+      break;
+    case 52:
+      Digitizer.move(350+200*2,600+150*2); //Low E
+#if DEBUG >= 1
+      Serial.println("LowE");
+#endif
+      break;
+    case 53:
+      Digitizer.move(350+200*3,600+150*2); //Low F
+#if DEBUG >= 1
+      Serial.println("LowF");
+#endif
+      break;
+    case 55:
+      Digitizer.move(350+200*4,600+150*2); //Low G
+#if DEBUG >= 1
+      Serial.println("LowG");
+#endif
+      break;
+    case 57:
+      Digitizer.move(350+200*5,600+150*2); //Low A
+#if DEBUG >= 1
+      Serial.println("LowA");
+#endif
+      break;
+    case 59:
+      Digitizer.move(350+200*6,600+150*2); //Low H
+#if DEBUG >= 1
+      Serial.println("LowH");
+#endif
+      break;
+    case 60:
+      Digitizer.move(350,600+150*1); //C
+#if DEBUG >= 1
+      Serial.println("C");
+#endif
+      break;
+    case 62:
+      Digitizer.move(350+200*1,600+150*1); //D
+#if DEBUG >= 1
+      Serial.println("D");
+#endif
+      break;
+    case 64:
+      Digitizer.move(350+200*2,600+150*1); //E
+#if DEBUG >= 1
+      Serial.println("E");
+#endif
+      break;
+    case 65:
+      Digitizer.move(350+200*3,600+150*1); //F
+#if DEBUG >= 1
+      Serial.println("F");
+#endif
+      break;
+    case 67:
+      Digitizer.move(350+200*4,600+150*1); //G
+#if DEBUG >= 1
+      Serial.println("G");
+#endif
+      break;
+    case 69:
+      Digitizer.move(350+200*5,600+150*1); //A
+#if DEBUG >= 1
+      Serial.println("A");
+#endif
+      break;
+    case 71:
+      Digitizer.move(350+200*6,600+150*1); //H
+#if DEBUG >= 1
+      Serial.println("H");
+#endif
+      break;
+    case 72:
+      Digitizer.move(350,600); //High C
+#if DEBUG >= 1
+      Serial.println("HighC");
+#endif
+      break;
+    case 74:
+      Digitizer.move(350+200*1,600);//High D
+#if DEBUG >= 1
+      Serial.println("HighD");
+#endif
+      break;
+    case 76:
+      Digitizer.move(350+200*2,600); //High E
+#if DEBUG >= 1
+      Serial.println("HighE");
+#endif
+      break;
+    case 77:
+      Digitizer.move(350+200*3,600); //High F
+#if DEBUG >= 1
+      Serial.println("HighF");
+#endif
+      break;
+    case 79:
+      Digitizer.move(350+200*4,600); //High G
+#if DEBUG >= 1
+      Serial.println("HighG");
+#endif
+      break;
+    case 81:
+      Digitizer.move(350+200*5,600); //High A
+#if DEBUG >= 1
+      Serial.println("HighA");
+#endif
+      break;
+    case 83:
+      Digitizer.move(350+200*6,600); //High H
+#if DEBUG >= 1
+      Serial.println("HighH");
+#endif
+    default:
+#if DEBUG >= 1
+      Serial.println("none");
+#endif
+      return 0;
+  }
+  Digitizer.click();
+  }else{  //debug(7 != LOW)
+    switch (num){
+    case 48:
+#if DEBUG >= 1
+      Serial.println("LowC");
+#endif
+      break;
+    case 50:
+#if DEBUG >= 1
+      Serial.println("LowD");
+#endif
+      break;
+    case 52:
+#if DEBUG >= 1
+      Serial.println("LowE");
+#endif
+      break;
+    case 53:
+#if DEBUG >= 1
+      Serial.println("LowF");
+#endif
+      break;
+    case 55:
+#if DEBUG >= 1
+      Serial.println("LowG");
+#endif
+      break;
+    case 57:
+#if DEBUG >= 1
+      Serial.println("LowA");
+#endif
+      break;
+    case 59:
+#if DEBUG >= 1
+      Serial.println("LowH");
+#endif
+      break;
+    case 60:
+#if DEBUG >= 1
+      Serial.println("C");
+#endif
+      break;
+    case 62:
+#if DEBUG >= 1
+      Serial.println("D");
+#endif
+    case 64:
+#if DEBUG >= 1
+      Serial.println("E");
+#endif
+      break;
+    case 65:
+#if DEBUG >= 1
+      Serial.println("F");
+#endif
+    case 67:
+#if DEBUG >= 1
+      Serial.println("G");
+#endif
+      break;
+    case 69:
+#if DEBUG >= 1
+      Serial.println("A");
+#endif
+      break;
+    case 71:
+#if DEBUG >= 1
+      Serial.println("H");
+#endif
+      break;
+    case 72:
+#if DEBUG >= 1
+      Serial.println("HighC");
+#endif
+      break;
+    case 74:
+#if DEBUG >= 1
+      Serial.println("HighD");
+#endif
+      break;
+    case 76:
+#if DEBUG >= 1
+      Serial.println("HighE");
+#endif
+      break;
+    case 77:
+#if DEBUG >= 1
+      Serial.println("HighF");
+#endif
+      break;
+    case 79:
+#if DEBUG >= 1
+      Serial.println("HighG");
+#endif
+      break;
+    case 81:
+#if DEBUG >= 1
+      Serial.println("HighA");
+#endif
+      break;
+    case 83:
+#if DEBUG >= 1
+      Serial.println("HighH");
+#endif
+      break;
+    default:
+#if DEBUG >= 1
+      Serial.println("none");
+#endif
+      return 0;
+  }
+  }
+  return 1;
+#endif
   //Digitizer.move(DISPLAY_RESOLUTION_X/2,DISPLAY_RESOLUTION_Y/2);
   //Digitizer.click();
 #if DEBUG >= 1
@@ -401,7 +654,11 @@ void setup() {
   MIDI.begin(MIDI_CHANNEL_OMNI);
   Serial.begin(115200);
   Keyboard.begin();
+#if PROCESSING == 1
+  Digitizer.setDisplayResolution(0, 0, 1919, 1079);
+#else
   Digitizer.setDisplayResolution(0, 0, DISPLAY_RESOLUTION_X, DISPLAY_RESOLUTION_Y);
+#endif
   Digitizer.setLogicalResolution(0, 0, LOGICAL_RESOLUTION_X, LOGICAL_RESOLUTION_Y);
   pinMode(7,INPUT_PULLUP);
 }

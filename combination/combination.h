@@ -2,6 +2,7 @@
 #define MULTITASK_H_
 
 #define DEBUG 2
+#define PROCESSING 1
 #define DEBSERIAL 1
 #define SOFTWARE_VERSION "ver. 1.1.0"
 
@@ -18,27 +19,27 @@
 
 #define PIN_SAFETY 7
 
-#define KEYLOWC "z"
-#define KEYLOWD "x"
-#define KEYLOWE "c"
-#define KEYLOWF "v"
-#define KEYLOWG "b"
-#define KEYLOWA "n"
-#define KEYLOWH "m"
-#define KEYC "a"
-#define KEYD "s"
-#define KEYE "d"
-#define KEYF "f"
-#define KEYG "g"
-#define KEYA "h"
-#define KEYH "j"
-#define KEYHIGHC "q"
-#define KEYHIGHD "w"
-#define KEYHIGHE "e"
-#define KEYHIGHF "r"
-#define KEYHIGHG "t"
-#define KEYHIGHA "y"
-#define KEYHIGHH "u"
+#define KEYLOWC 0x7a
+#define KEYLOWD 0x78
+#define KEYLOWE 0x63
+#define KEYLOWF 0x76
+#define KEYLOWG 0x62
+#define KEYLOWA 0x6e
+#define KEYLOWH 0x6d
+#define KEYC 0x61
+#define KEYD 0x73
+#define KEYE 0x64
+#define KEYF 0x66
+#define KEYG 0x67
+#define KEYA 0x68
+#define KEYH 0x6a
+#define KEYHIGHC 0x71
+#define KEYHIGHD 0x77
+#define KEYHIGHE 0x65
+#define KEYHIGHF 0x72
+#define KEYHIGHG 0x74
+#define KEYHIGHA 0x79
+#define KEYHIGHH 0x75
 
 
 #endif  //MULTITASK_H_
